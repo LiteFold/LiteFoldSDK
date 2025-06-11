@@ -34,8 +34,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/stainless-sdks/litefold-python"
-Repository = "https://github.com/stainless-sdks/litefold-python"
+Homepage = "https://github.com/LiteFold/LiteFoldSDK"
+Repository = "https://github.com/LiteFold/LiteFoldSDK"
 
 
 [tool.rye]
@@ -121,7 +121,7 @@ path = "README.md"
 [[tool.hatch.metadata.hooks.fancy-pypi-readme.substitutions]]
 # replace relative links with absolute links
 pattern = '\[(.+?)\]\(((?!https?://)\S+?)\)'
-replacement = '[\1](https://github.com/stainless-sdks/litefold-python/tree/main/\g<2>)'
+replacement = '[\1](https://github.com/LiteFold/LiteFoldSDK/tree/main/\g<2>)'
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
