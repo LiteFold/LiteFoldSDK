@@ -66,7 +66,7 @@ asyncio.run(main())
 ## Structure Prediction
 Here is a simple example on how to run structure prediction for LiteFold
 
-```
+```python
 import os
 from litefold import Litefold
 
