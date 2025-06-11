@@ -30,7 +30,7 @@ from ._response import (
     async_to_raw_response_wrapper,
     async_to_streamed_response_wrapper,
 )
-from .resources import health, upload, api_keys, structure_prediction
+from .resources import upload, structure_prediction
 from ._streaming import Stream as Stream, AsyncStream as AsyncStream
 from ._exceptions import LitefoldError, APIStatusError
 from ._base_client import (
@@ -54,9 +54,7 @@ __all__ = [
 
 class Litefold(SyncAPIClient):
     upload: upload.UploadResource
-    api_keys: api_keys.APIKeysResource
     structure_prediction: structure_prediction.StructurePredictionResource
-    health: health.HealthResource
     with_raw_response: LitefoldWithRawResponse
     with_streaming_response: LitefoldWithStreamedResponse
 
@@ -115,9 +113,7 @@ class Litefold(SyncAPIClient):
         )
 
         self.upload = upload.UploadResource(self)
-        self.api_keys = api_keys.APIKeysResource(self)
         self.structure_prediction = structure_prediction.StructurePredictionResource(self)
-        self.health = health.HealthResource(self)
         self.with_raw_response = LitefoldWithRawResponse(self)
         self.with_streaming_response = LitefoldWithStreamedResponse(self)
 
@@ -247,9 +243,7 @@ class Litefold(SyncAPIClient):
 
 class AsyncLitefold(AsyncAPIClient):
     upload: upload.AsyncUploadResource
-    api_keys: api_keys.AsyncAPIKeysResource
     structure_prediction: structure_prediction.AsyncStructurePredictionResource
-    health: health.AsyncHealthResource
     with_raw_response: AsyncLitefoldWithRawResponse
     with_streaming_response: AsyncLitefoldWithStreamedResponse
 
@@ -308,9 +302,7 @@ class AsyncLitefold(AsyncAPIClient):
         )
 
         self.upload = upload.AsyncUploadResource(self)
-        self.api_keys = api_keys.AsyncAPIKeysResource(self)
         self.structure_prediction = structure_prediction.AsyncStructurePredictionResource(self)
-        self.health = health.AsyncHealthResource(self)
         self.with_raw_response = AsyncLitefoldWithRawResponse(self)
         self.with_streaming_response = AsyncLitefoldWithStreamedResponse(self)
 
@@ -441,11 +433,9 @@ class AsyncLitefold(AsyncAPIClient):
 class LitefoldWithRawResponse:
     def __init__(self, client: Litefold) -> None:
         self.upload = upload.UploadResourceWithRawResponse(client.upload)
-        self.api_keys = api_keys.APIKeysResourceWithRawResponse(client.api_keys)
         self.structure_prediction = structure_prediction.StructurePredictionResourceWithRawResponse(
             client.structure_prediction
         )
-        self.health = health.HealthResourceWithRawResponse(client.health)
 
         self.retrieve = to_raw_response_wrapper(
             client.retrieve,
@@ -455,11 +445,9 @@ class LitefoldWithRawResponse:
 class AsyncLitefoldWithRawResponse:
     def __init__(self, client: AsyncLitefold) -> None:
         self.upload = upload.AsyncUploadResourceWithRawResponse(client.upload)
-        self.api_keys = api_keys.AsyncAPIKeysResourceWithRawResponse(client.api_keys)
         self.structure_prediction = structure_prediction.AsyncStructurePredictionResourceWithRawResponse(
             client.structure_prediction
         )
-        self.health = health.AsyncHealthResourceWithRawResponse(client.health)
 
         self.retrieve = async_to_raw_response_wrapper(
             client.retrieve,
@@ -469,11 +457,9 @@ class AsyncLitefoldWithRawResponse:
 class LitefoldWithStreamedResponse:
     def __init__(self, client: Litefold) -> None:
         self.upload = upload.UploadResourceWithStreamingResponse(client.upload)
-        self.api_keys = api_keys.APIKeysResourceWithStreamingResponse(client.api_keys)
         self.structure_prediction = structure_prediction.StructurePredictionResourceWithStreamingResponse(
             client.structure_prediction
         )
-        self.health = health.HealthResourceWithStreamingResponse(client.health)
 
         self.retrieve = to_streamed_response_wrapper(
             client.retrieve,
@@ -483,11 +469,9 @@ class LitefoldWithStreamedResponse:
 class AsyncLitefoldWithStreamedResponse:
     def __init__(self, client: AsyncLitefold) -> None:
         self.upload = upload.AsyncUploadResourceWithStreamingResponse(client.upload)
-        self.api_keys = api_keys.AsyncAPIKeysResourceWithStreamingResponse(client.api_keys)
         self.structure_prediction = structure_prediction.AsyncStructurePredictionResourceWithStreamingResponse(
             client.structure_prediction
         )
-        self.health = health.AsyncHealthResourceWithStreamingResponse(client.health)
 
         self.retrieve = async_to_streamed_response_wrapper(
             client.retrieve,
