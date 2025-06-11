@@ -63,6 +63,24 @@ async def main() -> None:
 asyncio.run(main())
 ```
 
+## Structure Prediction
+Here is a simple example on how to run structure prediction for LiteFold
+
+```
+import os
+from litefold import Litefold
+
+client = Litefold(
+    api_key=os.environ.get("LITEFOLD_API_KEY"),  # This is the default and can be omitted
+)
+response = client.structure_prediction.submit(
+    job_name="job_name",
+    model_name="model_name",
+)
+print(response)
+```
+
+
 Error codes are as follows:
 
 | Status Code | Error Type                 |
