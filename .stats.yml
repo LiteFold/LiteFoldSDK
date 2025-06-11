@@ -1,4 +1,4 @@
 configured_endpoints: 6
 openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/litefold%2Flitefold-9b14f02504a0ec86ee9f5f304c0c0b519e42c35ec38483cc0d212b14d35ed117.yml
 openapi_spec_hash: d5882ee2bfec71c6d66f37cb6d6a59be
-config_hash: 3ec7f81682760551ead1ad3f52b1c3b2
+config_hash: 6a379d1885c8dd2367e3e4ca8b161002
