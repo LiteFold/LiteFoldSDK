@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.2 (2025-06-13)
+
+Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/LiteFold/LiteFoldSDK/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
+
+### Bug Fixes
+
+* **client:** correctly parse binary response | stream ([3e896bb](https://github.com/LiteFold/LiteFoldSDK/commit/3e896bba6379b7d5c3bbced51784491fd6422eb3))
+
+
+### Chores
+
+* **tests:** run tests in parallel ([4546f79](https://github.com/LiteFold/LiteFoldSDK/commit/4546f79a9fe0d9a12cbb43e9fedacbfd728ee2de))
+
 ## 0.1.0-alpha.1 (2025-06-11)
 
 Full Changelog: [v0.0.1-alpha.0...v0.1.0-alpha.1](https://github.com/LiteFold/LiteFoldSDK/compare/v0.0.1-alpha.0...v0.1.0-alpha.1)
