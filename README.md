@@ -1,6 +1,6 @@
 # Litefold Python API library
 
-[![PyPI version](https://img.shields.io/pypi/v/litefold.svg)](https://pypi.org/project/litefold/)
+[![PyPI version](<https://img.shields.io/pypi/v/litefold.svg?label=pypi%20(stable)>)](https://pypi.org/project/litefold/)
 
 The Litefold Python library provides convenient access to the Litefold REST API from any Python 3.8+
 application. The library includes type definitions for all request params and response fields,
